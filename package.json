@@ -1,0 +1,30 @@
+{
+  "name": "ttpoint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tt.js",
+  "scripts": {
+    "start": "mocha tt.js --timeout 50000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasbald/pointerHH.git"
+  },
+  "author": "lucasbald",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasbald/pointerHH/issues"
+  },
+  "homepage": "https://github.com/lucasbald/pointerHH#readme",
+  "devDependencies": {
+    "atob": "^2.1.2",
+    "chai": "^4.2.0",
+    "cross-env": "^5.2.0",
+    "fs": "0.0.1-security",
+    "mocha": "^6.1.4",
+    "pixelmatch": "^5.0.2",
+    "pngjs": "^3.4.0",
+    "puppeteer": "^1.18.1"
+  }
+}
