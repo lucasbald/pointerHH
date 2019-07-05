@@ -161,7 +161,7 @@ describe('Fazer apontamento', function() {
     //Create a file with all the specs
     fs.writeFile('report.json', reportToExport, function (err) {
       if (err) throw err;
-      console.log('File is created successfully.');
+      console.log('Report is created successfully.');
     }); 
   })
 })

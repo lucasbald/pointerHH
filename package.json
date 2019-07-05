@@ -4,7 +4,8 @@
   "description": "",
   "main": "tt.js",
   "scripts": {
-    "start": "mocha tt.js --timeout 50000",
+    "start": "mocha tt.js --timeout 50000 ENV=DEV",
+    "start:debug": "mocha tt.js --timeout 50000 ENV=DEBUG",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
