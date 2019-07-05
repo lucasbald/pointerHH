@@ -9,7 +9,6 @@ const fs    = require("fs")
 const jsonData = require('./token.json');
 
 let { token } = jsonData
-let url // Some URL
 
 let testFolder = 'testFolder'
 let goldenFolder = 'goldenFolder'
@@ -123,6 +122,7 @@ describe('Fazer apontamento', function() {
 
   before(async function() {
     tokenResponse = parseJwt(token)
+    let { url } = tokenResponse
     env === 'DEBUG' ? browser = await puppeteer.launch({
             headless: false,
             slowMo: 250
