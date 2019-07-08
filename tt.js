@@ -122,7 +122,6 @@ describe('Fazer apontamento', function() {
 	before(async function() {
 		tokenResponse = parseJwt(token)
 		let { url } = tokenResponse
-		console.log(tokenResponse)
 		env === 'DEBUG' ? browser = await puppeteer.launch({
 			headless: false,
 			slowMo: 250
