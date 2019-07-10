@@ -51,4 +51,5 @@ Lucas Baldin - lucasbaldin1311@gmail.com
 
 * 0.1
     * Initial Release
-
+* 1.0
+    * Different files for the functions
