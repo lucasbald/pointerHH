@@ -13,7 +13,7 @@ function prompt() {
 				}
 
 				if (verification) {
-					if (!fs.existsSync('user.secret.json')) fs.writeFile('user.secret.json', JSON.stringify(userCredentials), function () {})
+					if (!fs.existsSync('user.json')) fs.writeFile('user.json', JSON.stringify(userCredentials), function () {})
 					return
 				} else {
 					console.log('Password did not match, please try again!')
