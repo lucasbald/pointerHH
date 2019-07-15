@@ -1,4 +1,5 @@
 #
 testFolder
-node_modules
+/node_modules
 *.json
+.secret.json

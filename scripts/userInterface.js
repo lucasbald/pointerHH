@@ -1,8 +1,11 @@
-var read = require('./lib/read.js')
+'use strict'
+
+const read = require('../lib/read.js')
 const fs    = require('fs')
+const { createUserInfo } = require('./createToken')
 
 
-function prompt() {
+function promptInfo() {
 	read({ prompt: 'Username: ', default: 'test-user' }, function (er, user) {
 		read({ prompt: 'Password: ', default: 'test-pass', silent: true }, function (er, pass) {
 			read({ prompt: 'Password again: ', default: 'test-pass', silent: true }, function (er, pass2) {
@@ -13,7 +16,9 @@ function prompt() {
 				}
 
 				if (verification) {
-					if (!fs.existsSync('user.json')) fs.writeFile('user.json', JSON.stringify(userCredentials), function () {})
+					if (!fs.existsSync('.secret.json')) fs.writeFile('.secret.json', JSON.stringify(userCredentials), function () {})
+					console.log('Create token!')
+					createUserInfo()
 					return
 				} else {
 					console.log('Password did not match, please try again!')
@@ -24,7 +29,16 @@ function prompt() {
 	})
 }
 
+if (fs.existsSync('.secret.json')) {
+	console.log('Create token!')
+	createUserInfo()
+} else {
+	promptInfo()
+}
 
-prompt()
+module.exports = {
+	promptInfo,
+}
 
- 
+
+
