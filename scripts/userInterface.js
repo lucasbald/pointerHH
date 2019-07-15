@@ -17,7 +17,6 @@ function promptInfo() {
 
 				if (verification) {
 					if (!fs.existsSync('.secret.json')) fs.writeFile('.secret.json', JSON.stringify(userCredentials), function () {})
-					console.log('Create token!')
 					createUserInfo()
 					return
 				} else {
