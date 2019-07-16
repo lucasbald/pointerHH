@@ -28,7 +28,6 @@ async function takeScreenshot(page, action, tokenResponse) {
 		testImage = 'baterPonto'
 		break
 	default:
-		console.log('TO DO! ')
 	}
   
 

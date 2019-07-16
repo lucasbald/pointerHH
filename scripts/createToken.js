@@ -1,7 +1,7 @@
 'use strict'
 
 const fs    = require('fs')
-const jwt = require('jsonwebtoken');
+const jwt = require('jsonwebtoken')
 
 
 let secretContent
@@ -9,10 +9,10 @@ let secretContent
 function createUserInfo() {
 	fs.readFile('.secret.json', 'utf8', function(err, contents) {
 		secretContent = JSON.parse(contents)
-		const token = jwt.sign({ user: secretContent.user, pass: secretContent.pass, url: 'someUrl' }, 'fooshh');
+		const token = jwt.sign({ user: secretContent.user, pass: secretContent.pass, url: secretContent.url}, 'fooshh')
 		fs.writeFile('token.json', JSON.stringify({token}), function () {})
-		fs.unlink('.secret.json',function(){});  
-	});
+		fs.unlink('.secret.json',function(){})
+	})
 }
 
 
