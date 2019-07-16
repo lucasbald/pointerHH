@@ -1,6 +1,5 @@
-#ignore token
-token.json
-report.json
+#
 testFolder
-email.js
-node_modules
+/node_modules
+*.json
+.secret.json
