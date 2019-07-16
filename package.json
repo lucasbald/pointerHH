@@ -7,7 +7,8 @@
     "start": "mocha tt.js --timeout 50000 ENV=DEV",
     "start:debug": "mocha tt.js --timeout 50000 ENV=DEBUG",
     "config:user": "node ./scripts/userInterface.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "help": "echo Please send an email for lucas.sbaldin@gmail.com , thanks!- https://github.com/lucasbald/pointerHH"
   },
   "repository": {
     "type": "git",
