@@ -19,6 +19,8 @@ function promptInfo() {
 
 					if (verification) {
 						if (!fs.existsSync('.secret.json')) fs.writeFile('.secret.json', JSON.stringify(userConfiguration), function () {})
+						// eslint-disable-next-line no-console
+						console.log('Creating user ...')
 						createUserInfo()
 						return
 					} else {
@@ -30,7 +32,7 @@ function promptInfo() {
 								return console.error('Exiting the user configuration!')
 							}
 						})
-					
+
 					}
 				})
 			})
